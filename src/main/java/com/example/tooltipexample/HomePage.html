@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.5-strict.dtd">
+    <head>
+        <meta charset="utf-8" />
+        <title>Apache Wicket Quickstart</title>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-default" ng-controller="menuController">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">Tooltip example</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="">Menu option 1</a></li>
+                    <li><a href="">Menu option 2</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                    <div class="input-group">
+                    <input type="text" wicket:message="placeholder:inputhelp"/>
+                    <span class="help">
+                        <a wicket:id="tooltipanchor" href="#"  title="Click to help"><img src="QuestionMark.png"/></a>
+                        <span wicket:id="tooltip" class="tooltip">
+                            <wicket:message key="tooltip_help"/>
+                            <ul>
+                                <li><wicket:message key="tooltip_ex1"/></li>
+                                <li><wicket:message key="tooltip_ex2"/></li>
+                            </ul>
+                        </span>
+                    
+                    </span>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+        </div>
+        <nav class="navbar navbar-fixed-bottom">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <p class="well">
+                        Please mention the correct Wicket version: <wicket:container wicket:id="version">1.5-SNAPSHOT</wicket:container>.
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>
